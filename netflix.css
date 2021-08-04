@@ -38,19 +38,19 @@ body{
 
 .language-drop-down:focus{
     outline: none;
-    background-color: grey;
+    background-color: #00000066;
 }
 
 .dropdown-container{
     border: 1px solid white;
-    padding: .4rem;
+    padding: 0.4rem;
     border-radius: 4px;
     background: rgba(0, 0, 0, 0.4);
 }
 
 .signin-button{
-    background-color: #dc030f;
-    border: 1px solid #dc030f;
+    background-color: #e50914;
+    border: 1px solid #e50914;
     color: white;
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
@@ -63,7 +63,7 @@ body{
 
 .hero-bg-image-container{
     width: 100%;
-    height: 75vh;
+    height: 80vh;
 }
 
 .hero-bg-image{
@@ -76,14 +76,15 @@ body{
     position: absolute;
     inset: 0;
     width: 100%;
-    height: 75vh;
+    height: 80vh;
     background: rgba(0, 0, 0, 0.4);
-
+    background-image: linear-gradient( to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100% );
+    
 }
 
-.hero-cart{
+.hero-card{
     position: absolute;
-    top: 30%;
+    top: 20%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -103,17 +104,272 @@ body{
 .hero-description{
     font-weight: 400;
     font-size: 1rem;
+    margin: 0 50px;
+}
+
+.email-input{
+    border: none;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    padding-left: 7px;
+}
+
+.email-label{
+    color:black;
+    position: absolute;
+    top: 28%;
+    left: 2%;
+    color: rgb(153, 149, 149);
+    transition: 0.5s;
+}
+
+.email-form-container{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 15px;
+}
+
+.form-container{
+background-color: white;
+width:90% ;
+height: 50px;
+position: relative;
+}
+
+.email-input:focus + .email-label{
+    top: 0.2rem;
+    font-size: 10px;
+}
+
+.email-input:not(:placeholder-shown).email-input:not(:focus) + .email-label{
+    top: 0.2rem;
+    font-size: 10px;
+}
+
+.email-input:focus-visible{
+    outline: none;
+}
+
+.primary-button{
+    background-color: #e50914;
+    border: 1px solid #e50914;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border-radius: 2px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.feature{
+    border-top: 8px solid #222;
+    padding: 2rem 1rem;
+}
+
+.feature-details{
+    text-align: center;
+}
+
+.feature-title{
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.feature-sub-title{
+    font-size: 15px;
+    font-weight: 400;
+
 }
 
 
 
+.feature-image-container{
+    width: 100%;
+    position: relative;
+}
+
+.feature-image{
+    width: 100%;
+}
+
+.feature-background-video-container{
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    left: 13%;
+    height: 100%;
+    max-width: 73%;
+    max-height: 54%;
+    z-index: -2;
+
+}
+
+.feature-background-video{
+    width: 100%;
+}
+
+.feature-2-poster-container{
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 16em;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    height: 60px;
+    padding: 0.25rem 0.6rem;
+    gap: 15px;
+}
+
+.poster-container{
+    width: 20%;
+}
+.poster{
+    width: 100%;
+    height: 100%;
+}
+
+.poster-details{
+    width: 60%;
+}
+
+.poster-details > h4 {
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .poster-details > h6 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #0071eb;
+  }
+
+.download-gif-conatainer{
+    width: 25%;
+    height: 100%;
+}
+
+.gif{
+    width: 100%;
+    height: 100%;
+}
+
+.feature-3-background-video-container {
+    max-width: 63%;
+    max-height: 47%;
+    z-index: -2;
+    top: 9%;
+    left: 19%;
+  }
+
+.FAQ-accordian {
+    width: 100%;
+  }
+
+.FAQ-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    font-size: 18px;
+    background-color: #303030;
+    border: 1px solid #303030;
+    color: white;
+  }
+  
+.FAQ-visible {
+    background-color: #303030;
+    border-top: 1px solid black;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+  
+.FAQ-visible > p {
+    margin: 1rem;
+  }
+
+.FAQ-list-container {
+    border-top: 8px solid #222;
+    padding: 2rem 0;
+  }
+
+.FAQ-heading {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    margin: 1rem 3rem;
+  }
+  
+.FAQ-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+.FAQ-get-started-email {
+    text-align: center;
+  }
+  
+.FAQ-get-started-email > h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 2rem 0;
+  }
+
+footer {
+    border-top: 8px solid #333;
+    padding: 2rem 1rem;
+    color: #757575;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+.footer-row-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+.footer-row-1 > h4 {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  
+.footer-row-3 > .dropdown-container {
+    width: fit-content;
+    border: 1px solid #757575;
+    color: #757575;
+  }
+  
+.footer-row-3 > .dropdown-container > .language__drop__down {
+    color: #757575;
+    background-color: black;
+  }
+
+
+/* ----------------Medium Screen-------------------- */
 @media (min-width:768px) {
 .hero-bg-image-container{
     height: 100vh;
     }
 
-.hero-cart{
-    top: 50%;
+.hero-bg-overlay {
+        height: 100vh;
+      }
+      
+.hero-card{
+    top: 40%;
     left: 50%;
     transform: translate(-20%, -20%);
     }
@@ -130,10 +386,62 @@ body{
 .hero-description{
     font-size: 1.3rem;
 }
+
+.feature{
+    padding: 4rem;
+}
+
+.feature-title{
+    font-size: 35px;
+}
+
+.feature-sub-title{
+    font-size: 20px;
+}
+
+.feature-2-poster-container{
+    max-width: 26em;
+    height: 85px;
+  }
+
+  .poster-container {
+    width: 15%;
+  }
+  .download-gif-container {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .poster-details > h4 {
+    font-size: 18px;
+  }
+  .poster-details > h6 {
+    font-size: 14px;
+  }
+
+  .FAQ-title {
+    font-size: 20px;
+  }
+  .FAQ-heading {
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  .FAQ-list {
+    padding: 1rem 5rem;
+  }
+  .FAQ-get-started-email {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(15%);
+  }
+
 }
 
 
-
+/* ---------------------PC SCREEN--------------------- */
 
 
 
@@ -143,7 +451,7 @@ body{
     }
 
     .navbar-brand{
-        width: 200px;
+        width: 150px;
     }
 
     .signin-button{
@@ -159,24 +467,92 @@ body{
         gap: 30px;
     }
 
-    .hero-cart{
+    .hero-card{
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        }
+    }
 
-        .hero-bg-overlay{
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-        
-        }
+    .form-container{
+        width: 50%;
+    }
+
+    .email-form-container{
+        flex-direction: row;
+        align-items: center;
+        gap: 1px;
+    }
+
+    .primary-button{
+        height: 50px;
+    }
+
+    .feature{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px ;
+    }
+    .feature-details{
+        text-align: left;
+        padding: 0 6rem;
+    }
+
+    .feature-title{
+        font-size: 50px;
+    }
+    .feature-sub-title{
+        font-size: 25px;
+    }
+
+    .feature-image-container{
+        max-width: 500px;
+    }
+
+    .feature:nth-child(even){
+        flex-direction: row-reverse;
+    }
+
+    .feature-2-poster-container{
+        max-width: 21em;
+        height: 100px;
+        padding: 1rem;
+      }
+
+    .poster-container{
+        width: 20%;
+      }
     
+    .FAQ-list {
+        padding: 1rem 20rem;
+      }
+
+    .FAQ-get-started-email {
+        transform: translateX(16%);
+      }
+
+    footer {
+        padding: 2rem 25rem;
+        justify-content: flex-start;
+        text-align: left;
+        align-items: flex-start;
+      }
+    
+    .footer-row-2 {
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+      }
+    
+    .footer-row-1,
+    .footer-row-3,
+    .footer-row-4 {
+        align-self: flex-start;
+      }
 }
 
 
+/* ------------------------------------------- */
 
 
 @media (min-width:1254px) {
